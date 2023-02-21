@@ -46,14 +46,15 @@ void main(){
             pr=precedence(ch);
             if(ch=='^') pr++;
             while(precedence(stack[top])>=pr){
-                postfix[k++]=pop();push(ch);
+                postfix[k++]=pop();
             }
+            push(ch);
         }
-        while(stack[top]!='#'){
+    }
+    while(stack[top]!='#'){
             postfix[k++]=pop();
         }
         postfix[k]='\0';
         printf("Given Infix Expression: %s\n",infix);
         printf("The Postfix Expression: %s\n",postfix);
-    }
 }
