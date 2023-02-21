@@ -36,7 +36,7 @@ void main(){
                 case '*':push(op1*op2);break;
                 case '/':push(op1/op2);break;
                 case '%':push(op1%op2);break;
-                case '^':push(op1^op2);break;
+                case '^':push(pow(op1,op2));break;
                 default:printf("Invalid Operator\n");
                 return;
             }
